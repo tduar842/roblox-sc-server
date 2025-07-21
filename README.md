@@ -1,7 +1,7 @@
 # ro-remote-play
 dependencies (python):
--Pillow (pip install pillow)
--pyautogui (pip install pyautogui)
+* Pillow (pip install pillow)
+* pyautogui (pip install pyautogui)
 
 # how to setup this server:
 create a render.com server
