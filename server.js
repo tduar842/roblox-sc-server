@@ -13,7 +13,6 @@ app.use(express.json());
 // Handle POST requests from Roblox
 app.post("/data", (req, res) => {
   console.log("Headers:", req.headers);
-  console.log("Body:", req.body);
 
   img_data = req.body;
  /* const player = req.body.player;
@@ -29,8 +28,6 @@ app.post("/data", (req, res) => {
 
 //get last player to update remote
 app.get("/remote", (req, res) => {
-  console.log("data:", img_data);
-
   res.send(img_data);
 });
 
