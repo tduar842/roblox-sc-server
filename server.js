@@ -5,12 +5,28 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 let img_data = {};
+let last_input = {};
 
 // Middleware to parse JSON and allow cross-origin requests
 app.use(cors());
 app.use(express.json());
 
-// Handle POST requests from Roblox
+//get last player to update remote
+app.get("/remote_inp", (req, res) => {
+  res.send(last_input);
+  last_input = {};
+});
+
+//get input
+app.post("/inp_data", (req, res) => {
+  console.log("Headers:", req.headers);
+  
+  last_input = req.body;
+  
+  res.json({ success: true, message: "Data received!" });
+});
+
+// Handle POST requests from python
 app.post("/data", (req, res) => {
   console.log("Headers:", req.headers);
 
