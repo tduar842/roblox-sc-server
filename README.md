@@ -2,6 +2,7 @@
 dependencies (python):
 * Pillow (pip install pillow)
 * pyautogui (pip install pyautogui)
+* requests (pip install requests)
 
 # how to setup this server:
 create a render.com server
